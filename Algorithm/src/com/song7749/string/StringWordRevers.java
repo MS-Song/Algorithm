@@ -5,6 +5,7 @@ import java.util.Scanner;
 /**
  문장의 형식을 가진 문자열의 모든 단어를 거꾸로 하시오.
 예) 'ABC 123' - 'CBA 321'
+시간복잡도는 O(n) 이다. 나누기를 하면 안된다.
  * @author song7749@gmail.com
  *
  */

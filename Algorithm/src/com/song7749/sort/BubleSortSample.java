@@ -4,11 +4,11 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 /**
- * 퀵 소트  구현
+ * 버블 소트 구현
  * @author song7749@gmail.com
  *
  */
-public class QuickSortSample {
+public class BubleSortSample {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
@@ -24,7 +24,9 @@ public class QuickSortSample {
 			System.out.printf("입력된 결과는 %s 입니다. ", Arrays.toString(data));
 			System.out.println();
 
-			quickSort(data, 0, data.length-1);
+			// 버블 소트 구현
+			bubleSort(data);
+
 			System.out.printf("정렬된 결과는 %s 입니다. ", Arrays.toString(data));
 		} catch (Exception e) {
 			System.err.println("잘못 입력 했습니다.");
@@ -34,29 +36,23 @@ public class QuickSortSample {
 		}
 	}
 
-	public static void quickSort(int[] data, int start, int end) {
-		System.out.printf("정렬 시도 중 - start: %d , end : %d ", start, end);
-		System.out.printf(", data : %s \n\r", Arrays.toString(data));
-
-		if(start < end) {
-			int pivot  = start; // pivot 값에 따라 효율이 정해짐으로 변경 필요 있음..
-			for(int i= start ; i < end ; i++) {
-				if(data[i] < data[end]) {
-					swap(data, i, pivot);
-					pivot++;
+	private static void bubleSort(int[] data) {
+		int temp=0;
+		boolean flag=false;
+		int count=data.length;
+		int times = 0;
+		for(int i=0; i<count; i++) {
+			flag=false;
+			for(int j=0; j<count -(i+1); j++) {
+				if(data[j] > data[j+1]) {
+					flag=true;
+					temp = data[j+1];
+					data[j+1] = data[j];
+					data[j]= temp;
 				}
+				if(flag=false) break;
+				System.out.println((++times) + "회 정렬 진행중 : " + Arrays.toString(data));
 			}
-			swap(data,pivot,end);
-			quickSort(data, start, pivot-1);
-			quickSort(data, pivot+1, end);
 		}
-	}
-
-	private static void swap(int[] data, int a, int b) {
-		System.out.println("swap 시도  : " + data[a] + " : " + data[b]);
-
-		int tmp = data[a];
-		data[a] = data[b];
-		data[b] = tmp;
 	}
 }
