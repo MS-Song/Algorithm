@@ -38,19 +38,15 @@ public class BubleSortSample {
 
 	private static void bubleSort(int[] data) {
 		int temp=0;
-		boolean flag=false;
 		int count=data.length;
 		int times = 0;
 		for(int i=0; i<count; i++) {
-			flag=false;
 			for(int j=0; j<count -(i+1); j++) {
 				if(data[j] > data[j+1]) {
-					flag=true;
 					temp = data[j+1];
 					data[j+1] = data[j];
 					data[j]= temp;
 				}
-				if(flag=false) break;
 				System.out.println((++times) + "회 정렬 진행중 : " + Arrays.toString(data));
 			}
 		}
