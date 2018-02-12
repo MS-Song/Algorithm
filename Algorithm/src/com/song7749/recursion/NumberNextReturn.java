@@ -1,4 +1,4 @@
-package com.song7749;
+package com.song7749.recursion;
 
 import java.util.Scanner;
 
