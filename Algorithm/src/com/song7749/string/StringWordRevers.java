@@ -29,17 +29,21 @@ public class StringWordRevers {
 	}
 
 	private static void sort(String str) {
-		// 단어를 자른다.
-		String[] split  = str.split(" ");
-		// 단어 별로 역 소트 한다.
-		for(int i=0; i<split.length;i++) {
-			split[i] = revers(split[i]);
+		StringBuffer sb = new StringBuffer();
+		String tmp = "";
+		for(int i=0 ; i  < str.length() ; i++ ) {
+			// 공백을 만나면 다른 글자로 판별 한다.
+			if(str.charAt(i) != ' ') {
+				tmp = str.charAt(i) + tmp;
+			}
+			else {
+				sb.append(tmp + " ");
+				tmp="";
+			}
+			if(i == str.length()-1) {
+				sb.append(tmp);
+			}
 		}
-		str = String.join(" ", split);
-		System.out.println("결과값 : " + str);
-	}
-
-	private static String revers(String s) {
-	  return ( new StringBuffer(s) ).reverse().toString();
+		System.out.println("결과값 : " + sb.toString());
 	}
 }
