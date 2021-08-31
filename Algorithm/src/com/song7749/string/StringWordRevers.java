@@ -3,9 +3,9 @@ package com.song7749.string;
 import java.util.Scanner;
 
 /**
- ¹®ÀåÀÇ Çü½ÄÀ» °¡Áø ¹®ÀÚ¿­ÀÇ ¸ğµç ´Ü¾î¸¦ °Å²Ù·Î ÇÏ½Ã¿À.
-¿¹) 'ABC 123' - 'CBA 321'
-½Ã°£º¹Àâµµ´Â O(n) ÀÌ´Ù. ³ª´©±â¸¦ ÇÏ¸é ¾ÈµÈ´Ù.
+ ë¬¸ì¥ì˜ í˜•ì‹ì„ ê°€ì§„ ë¬¸ìì—´ì˜ ëª¨ë“  ë‹¨ì–´ë¥¼ ê±°ê¾¸ë¡œ í•˜ì‹œì˜¤.
+ì˜ˆ) 'ABC 123' - 'CBA 321'
+ì‹œê°„ë³µì¡ë„ëŠ” O(n) ì´ë‹¤. ë‚˜ëˆ„ê¸°ë¥¼ í•˜ë©´ ì•ˆëœë‹¤.
  * @author song7749@gmail.com
  *
  */
@@ -13,13 +13,13 @@ public class StringWordRevers {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		System.out.println("Æ¯Á¤ÇÑ ¹®ÀÚ¿­À» ÀÔ·ÂÇÏ¼¼¿ä. ¼ıÀÚ¿Í ¹®ÀÚ °¢°¢ ¼ÒÆ®ÇÕ´Ï´Ù. "
+		System.out.println("íŠ¹ì •í•œ ë¬¸ìì—´ì„ ì…ë ¥í•˜ì„¸ìš”. ìˆ«ìì™€ ë¬¸ì ê°ê° ì†ŒíŠ¸í•©ë‹ˆë‹¤. "
 				+ "\n EX) ABC 123 --> CBA 321");
-		System.out.print("¹®ÀÚ¿­À» ÀÔ·ÂÇÏ¼¼¿ä : ");
+		System.out.print("ë¬¸ìì—´ì„ ì…ë ¥í•˜ì„¸ìš” : ");
 
 		try {
 			String str = scan.nextLine();
-			System.out.println("ÀÔ·ÂµÈ °ªÀº " + str);
+			System.out.println("ì…ë ¥ëœ ê°’ì€ " + str);
 			sort(str);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -32,7 +32,7 @@ public class StringWordRevers {
 		StringBuffer sb = new StringBuffer();
 		String tmp = "";
 		for(int i=0 ; i  < str.length() ; i++ ) {
-			// °ø¹éÀ» ¸¸³ª¸é ´Ù¸¥ ±ÛÀÚ·Î ÆÇº° ÇÑ´Ù.
+			// ê³µë°±ì„ ë§Œë‚˜ë©´ ë‹¤ë¥¸ ê¸€ìë¡œ íŒë³„ í•œë‹¤.
 			if(str.charAt(i) != ' ') {
 				tmp = str.charAt(i) + tmp;
 			}
@@ -44,6 +44,6 @@ public class StringWordRevers {
 				sb.append(tmp);
 			}
 		}
-		System.out.println("°á°ú°ª : " + sb.toString());
+		System.out.println("ê²°ê³¼ê°’ : " + sb.toString());
 	}
 }

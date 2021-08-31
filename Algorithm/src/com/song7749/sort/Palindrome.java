@@ -1,11 +1,11 @@
 package com.song7749.sort;
 
 /**
- * Á¤¼ö(int)°¡ ÁÖ¾îÁö¸é, ÆÓ¸°µå·Ò(palindrome)ÀÎÁö ¾Ë¾Æ³»½Ã¿À.
- * ÆÓ¸°µå·ÒÀÌ¶õ, ¾Õ¿¡¼­ºÎÅÍ ÀĞÀ¸³ª µÚ¿¡¼­ºÎÅÍ ÀĞÀ¸³ª °°Àº ´Ü¾î¸¦ ¸»ÇÕ´Ï´Ù.
- * ´Ü, Á¤¼ö¸¦ ¹®ÀÚ¿­·Î ¹Ù²Ù¸é ¾ÈµË´Ï´Ù.
+ * ì •ìˆ˜(int)ê°€ ì£¼ì–´ì§€ë©´, íŒ°ë¦°ë“œë¡¬(palindrome)ì¸ì§€ ì•Œì•„ë‚´ì‹œì˜¤.
+ * íŒ°ë¦°ë“œë¡¬ì´ë€, ì•ì—ì„œë¶€í„° ì½ìœ¼ë‚˜ ë’¤ì—ì„œë¶€í„° ì½ìœ¼ë‚˜ ê°™ì€ ë‹¨ì–´ë¥¼ ë§í•©ë‹ˆë‹¤.
+ * ë‹¨, ì •ìˆ˜ë¥¼ ë¬¸ìì—´ë¡œ ë°”ê¾¸ë©´ ì•ˆë©ë‹ˆë‹¤.
 
-¿¹Á¦)
+ì˜ˆì œ)
 Input: 12345
 Output: False
 
@@ -28,11 +28,11 @@ public class Palindrome {
 	}
 
 	private static void isPalindrome(int palindrome) {
-		// °è»ê¿¡ À½¼ö´Â °ü°è¾ø´Ù.
+		// ê³„ì‚°ì— ìŒìˆ˜ëŠ” ê´€ê³„ì—†ë‹¤.
 		boolean isMiners = false;
 		if(0 > palindrome) {
 			isMiners=true;
-			palindrome = palindrome * (-1); // ¾ç¼öÈ­ ½ÃÅ²´Ù.
+			palindrome = palindrome * (-1); // ì–‘ìˆ˜í™” ì‹œí‚¨ë‹¤.
 		}
 		System.out.println("Input : " + (isMiners ? palindrome*(-1) : palindrome));
 		System.out.println("Output : " + (palindrome == flip(palindrome)));

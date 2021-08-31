@@ -4,10 +4,10 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 /**
- * Á¤¼ö·Î µÈ ¹è¿­ÀÌ ÁÖ¾îÁö¸é,
- * °¢ ¿ø¼Ò°¡ ÀÚ½ÅÀ» »« ³ª¸ÓÁö ¿ø¼ÒµéÀÇ °ö¼ÀÀÌ µÇ°Ô ÇÏ½Ã¿À.
- * ´Ü, ³ª´©±â »ç¿ë ±İÁö, O(n) ½Ã°£ º¹Àâµµ.
-	¿¹) [1, 2, 3, 4, 5] - [120, 60, 40, 30, 24]
+ * ì •ìˆ˜ë¡œ ëœ ë°°ì—´ì´ ì£¼ì–´ì§€ë©´,
+ * ê° ì›ì†Œê°€ ìì‹ ì„ ëº€ ë‚˜ë¨¸ì§€ ì›ì†Œë“¤ì˜ ê³±ì…ˆì´ ë˜ê²Œ í•˜ì‹œì˜¤.
+ * ë‹¨, ë‚˜ëˆ„ê¸° ì‚¬ìš© ê¸ˆì§€, O(n) ì‹œê°„ ë³µì¡ë„.
+	ì˜ˆ) [1, 2, 3, 4, 5] - [120, 60, 40, 30, 24]
 
  * @author song7749@gmail.com
  *
@@ -16,8 +16,8 @@ public class NumberMultiplicationOutSelfNumber {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		System.out.println("¿ø¼Ò¸¦ ÀÔ·Â ÇÏ½Ã¿À.  , (comma) ¸¦ ÀÌ¿ëÇØ¼­ ÀÔ·ÂÇÏ¼¼¿ä.EX) 1,2,3,4,5,6");
-		System.out.print("¼ıÀÚ¸¦ ÀÔ·Â ÇÏ¼¼¿ä : ");
+		System.out.println("ì›ì†Œë¥¼ ì…ë ¥ í•˜ì‹œì˜¤.  , (comma) ë¥¼ ì´ìš©í•´ì„œ ì…ë ¥í•˜ì„¸ìš”.EX) 1,2,3,4,5,6");
+		System.out.print("ìˆ«ìë¥¼ ì…ë ¥ í•˜ì„¸ìš” : ");
 		try {
 			String[] str = scan.nextLine().split(",");
 			int[] data  = new int[str.length];
@@ -26,14 +26,14 @@ public class NumberMultiplicationOutSelfNumber {
 				data[i]=Integer.parseInt(str[i].trim());
 			}
 
-			System.out.printf("ÀÔ·ÂµÈ °á°ú´Â %s ÀÔ´Ï´Ù. ", Arrays.toString(data));
+			System.out.printf("ì…ë ¥ëœ ê²°ê³¼ëŠ” %s ì…ë‹ˆë‹¤. ", Arrays.toString(data));
 			System.out.println();
 			cal(data,0,data.length-1,ret);
 
-			System.out.printf("°è»ê °á°ú´Â %s ÀÔ´Ï´Ù. ", Arrays.toString(ret));
+			System.out.printf("ê³„ì‚° ê²°ê³¼ëŠ” %s ì…ë‹ˆë‹¤. ", Arrays.toString(ret));
 
 		} catch (Exception e) {
-			System.err.println("Àß¸ø ÀÔ·Â Çß½À´Ï´Ù.");
+			System.err.println("ì˜ëª» ì…ë ¥ í–ˆìŠµë‹ˆë‹¤.");
 			e.printStackTrace();
 		} finally {
 			scan.close();

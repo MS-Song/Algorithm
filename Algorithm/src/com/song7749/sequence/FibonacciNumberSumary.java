@@ -1,11 +1,11 @@
 package com.song7749.sequence;
 
 /**
- * ÇÇº¸³ªÄ¡ ¼ö¿­Àº ¾Õ/µÚÀÇ ¼ýÀÚ¸¦ ´õÇÑ °ªÀÌ ´ÙÀ½ ¼ýÀÚ¸¦ Á¤ÇÏ°Ô µÈ´Ù.
- * ÃÖ´ë °ªÀÌ N º¸´Ù ÀÛÀº ÇÇº¸³ªÄ¡ ¼ö¿­ÀÇ Â¦¼ö¸¦ ±¸ÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À
- * ½ÃÀÛÀº 0 °ú 1·Î ÇÑ´Ù.
+ * í”¼ë³´ë‚˜ì¹˜ ìˆ˜ì—´ì€ ì•ž/ë’¤ì˜ ìˆ«ìžë¥¼ ë”í•œ ê°’ì´ ë‹¤ìŒ ìˆ«ìžë¥¼ ì •í•˜ê²Œ ëœë‹¤.
+ * ìµœëŒ€ ê°’ì´ N ë³´ë‹¤ ìž‘ì€ í”¼ë³´ë‚˜ì¹˜ ìˆ˜ì—´ì˜ ì§ìˆ˜ë¥¼ êµ¬í•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•˜ì‹œì˜¤
+ * ì‹œìž‘ì€ 0 ê³¼ 1ë¡œ í•œë‹¤.
  *
- * EX) N = 12 ÀÏ ¶§ , 0,1,2,3,5,8 // ´ä : 10
+ * EX) N = 12 ì¼ ë•Œ , 0,1,2,3,5,8 // ë‹µ : 10
  *
  * @author song7749@gmail.com
  *
@@ -23,6 +23,6 @@ public class FibonacciNumberSumary {
 			after = before + tmp;
 			sum += (after) % 2 == 0 ? after : 0;
 		} while(after < N) ;
-		System.out.println(" ´ä : "  + sum);
+		System.out.println(" ë‹µ : "  + sum);
 	}
 }

@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 /**
- * ¹öºí ¼ÒÆ® ±¸Çö
+ * ë²„ë¸” ì†ŒíŠ¸ êµ¬í˜„
  * @author song7749@gmail.com
  *
  */
@@ -12,8 +12,8 @@ public class BubleSortSample {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		System.out.println("Á¤·ÄÀÌ ÇÊ¿äÇÑ ¼ıÀÚ¸¦  , (comma) ¸¦ ÀÌ¿ëÇØ¼­ ÀÔ·ÂÇÏ¼¼¿ä.EX) 1,2,3,4,5,6");
-		System.out.print("¼ıÀÚ¸¦ ÀÔ·Â ÇÏ¼¼¿ä : ");
+		System.out.println("ì •ë ¬ì´ í•„ìš”í•œ ìˆ«ìë¥¼  , (comma) ë¥¼ ì´ìš©í•´ì„œ ì…ë ¥í•˜ì„¸ìš”.EX) 1,2,3,4,5,6");
+		System.out.print("ìˆ«ìë¥¼ ì…ë ¥ í•˜ì„¸ìš” : ");
 		try {
 			String[] str = scan.nextLine().split(",");
 			int[] data  = new int[str.length];
@@ -21,15 +21,15 @@ public class BubleSortSample {
 				data[i]=Integer.parseInt(str[i].trim());
 			}
 
-			System.out.printf("ÀÔ·ÂµÈ °á°ú´Â %s ÀÔ´Ï´Ù. ", Arrays.toString(data));
+			System.out.printf("ì…ë ¥ëœ ê²°ê³¼ëŠ” %s ì…ë‹ˆë‹¤. ", Arrays.toString(data));
 			System.out.println();
 
-			// ¹öºí ¼ÒÆ® ±¸Çö
+			// ë²„ë¸” ì†ŒíŠ¸ êµ¬í˜„
 			bubleSort(data);
 
-			System.out.printf("Á¤·ÄµÈ °á°ú´Â %s ÀÔ´Ï´Ù. ", Arrays.toString(data));
+			System.out.printf("ì •ë ¬ëœ ê²°ê³¼ëŠ” %s ì…ë‹ˆë‹¤. ", Arrays.toString(data));
 		} catch (Exception e) {
-			System.err.println("Àß¸ø ÀÔ·Â Çß½À´Ï´Ù.");
+			System.err.println("ì˜ëª» ì…ë ¥ í–ˆìŠµë‹ˆë‹¤.");
 			e.printStackTrace();
 		} finally {
 			scan.close();
@@ -47,7 +47,7 @@ public class BubleSortSample {
 					data[j+1] = data[j];
 					data[j]= temp;
 				}
-				System.out.println((++times) + "È¸ Á¤·Ä ÁøÇàÁß : " + Arrays.toString(data));
+				System.out.println((++times) + "íšŒ ì •ë ¬ ì§„í–‰ì¤‘ : " + Arrays.toString(data));
 			}
 		}
 	}

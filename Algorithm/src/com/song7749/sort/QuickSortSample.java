@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 /**
- * Äü ¼ÒÆ®  ±¸Çö
+ * í€µ ì†ŒíŠ¸  êµ¬í˜„
  * @author song7749@gmail.com
  *
  */
@@ -12,8 +12,8 @@ public class QuickSortSample {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		System.out.println("Á¤·ÄÀÌ ÇÊ¿äÇÑ ¼ıÀÚ¸¦  , (comma) ¸¦ ÀÌ¿ëÇØ¼­ ÀÔ·ÂÇÏ¼¼¿ä.EX) 1,2,3,4,5,6");
-		System.out.print("¼ıÀÚ¸¦ ÀÔ·Â ÇÏ¼¼¿ä : ");
+		System.out.println("ì •ë ¬ì´ í•„ìš”í•œ ìˆ«ìë¥¼  , (comma) ë¥¼ ì´ìš©í•´ì„œ ì…ë ¥í•˜ì„¸ìš”.EX) 1,2,3,4,5,6");
+		System.out.print("ìˆ«ìë¥¼ ì…ë ¥ í•˜ì„¸ìš” : ");
 		try {
 			String[] str = scan.nextLine().split(",");
 			int[] data  = new int[str.length];
@@ -21,13 +21,13 @@ public class QuickSortSample {
 				data[i]=Integer.parseInt(str[i].trim());
 			}
 
-			System.out.printf("ÀÔ·ÂµÈ °á°ú´Â %s ÀÔ´Ï´Ù. ", Arrays.toString(data));
+			System.out.printf("ì…ë ¥ëœ ê²°ê³¼ëŠ” %s ì…ë‹ˆë‹¤. ", Arrays.toString(data));
 			System.out.println();
 
 			quickSort(data, 0, data.length-1);
-			System.out.printf("Á¤·ÄµÈ °á°ú´Â %s ÀÔ´Ï´Ù. ", Arrays.toString(data));
+			System.out.printf("ì •ë ¬ëœ ê²°ê³¼ëŠ” %s ì…ë‹ˆë‹¤. ", Arrays.toString(data));
 		} catch (Exception e) {
-			System.err.println("Àß¸ø ÀÔ·Â Çß½À´Ï´Ù.");
+			System.err.println("ì˜ëª» ì…ë ¥ í–ˆìŠµë‹ˆë‹¤.");
 			e.printStackTrace();
 		} finally {
 			scan.close();
@@ -35,11 +35,11 @@ public class QuickSortSample {
 	}
 
 	public static void quickSort(int[] data, int start, int end) {
-		System.out.printf("Á¤·Ä ½Ãµµ Áß - start: %d , end : %d ", start, end);
+		System.out.printf("ì •ë ¬ ì‹œë„ ì¤‘ - start: %d , end : %d ", start, end);
 		System.out.printf(", data : %s \n\r", Arrays.toString(data));
 
 		if(start < end) {
-			int pivot  = start; // pivot °ª¿¡ µû¶ó È¿À²ÀÌ Á¤ÇØÁüÀ¸·Î º¯°æ ÇÊ¿ä ÀÖÀ½..
+			int pivot  = start; // pivot ê°’ì— ë”°ë¼ íš¨ìœ¨ì´ ì •í•´ì§ìœ¼ë¡œ ë³€ê²½ í•„ìš” ìˆìŒ..
 			for(int i= start ; i < end ; i++) {
 				if(data[i] < data[end]) {
 					swap(data, i, pivot);
@@ -53,7 +53,7 @@ public class QuickSortSample {
 	}
 
 	private static void swap(int[] data, int a, int b) {
-		System.out.println("swap ½Ãµµ  : " + data[a] + " : " + data[b]);
+		System.out.println("swap ì‹œë„  : " + data[a] + " : " + data[b]);
 
 		int tmp = data[a];
 		data[a] = data[b];

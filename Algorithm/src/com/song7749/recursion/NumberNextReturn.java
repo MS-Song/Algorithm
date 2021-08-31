@@ -3,34 +3,34 @@ package com.song7749.recursion;
 import java.util.Scanner;
 
 /**
-0º¸´Ù Å©°Å³ª °°°í, 99º¸´Ù ÀÛ°Å³ª °°Àº Á¤¼ö°¡ ÁÖ¾îÁú ¶§ ´ÙÀ½°ú °°Àº ¿¬»êÀ» ÇÒ ¼ö ÀÖ´Ù.
-¸ÕÀú ÁÖ¾îÁø ¼ö°¡ 10º¸´Ù ÀÛ´Ù¸é ¾Õ¿¡ 0À» ºÙ¿© µÎ ÀÚ¸® ¼ö·Î ¸¸µé°í, °¢ ÀÚ¸®ÀÇ ¼ýÀÚ¸¦ ´õÇÑ´Ù.
-±× ´ÙÀ½, ÁÖ¾îÁø ¼öÀÇ °¡Àå ¿À¸¥ÂÊ ÀÚ¸® ¼ýÀÚ¿Í ¾Õ¿¡¼­ ±¸ÇÑ ÇÕÀÇ °¡Àå ¿À¸¥ÂÊ ÀÚ¸® ¼ýÀÚ¸¦ ÀÌ¾î ºÙÀÌ¸é »õ·Î¿î ¼ö¸¦ ¸¸µé ¼ö ÀÖ´Ù.
+0ë³´ë‹¤ í¬ê±°ë‚˜ ê°™ê³ , 99ë³´ë‹¤ ìž‘ê±°ë‚˜ ê°™ì€ ì •ìˆ˜ê°€ ì£¼ì–´ì§ˆ ë•Œ ë‹¤ìŒê³¼ ê°™ì€ ì—°ì‚°ì„ í•  ìˆ˜ ìžˆë‹¤.
+ë¨¼ì € ì£¼ì–´ì§„ ìˆ˜ê°€ 10ë³´ë‹¤ ìž‘ë‹¤ë©´ ì•žì— 0ì„ ë¶™ì—¬ ë‘ ìžë¦¬ ìˆ˜ë¡œ ë§Œë“¤ê³ , ê° ìžë¦¬ì˜ ìˆ«ìžë¥¼ ë”í•œë‹¤.
+ê·¸ ë‹¤ìŒ, ì£¼ì–´ì§„ ìˆ˜ì˜ ê°€ìž¥ ì˜¤ë¥¸ìª½ ìžë¦¬ ìˆ«ìžì™€ ì•žì—ì„œ êµ¬í•œ í•©ì˜ ê°€ìž¥ ì˜¤ë¥¸ìª½ ìžë¦¬ ìˆ«ìžë¥¼ ì´ì–´ ë¶™ì´ë©´ ìƒˆë¡œìš´ ìˆ˜ë¥¼ ë§Œë“¤ ìˆ˜ ìžˆë‹¤.
 
-´ÙÀ½ ¿¹¸¦ º¸ÀÚ.
-26ºÎÅÍ ½ÃÀÛÇÑ´Ù.
-2+6 = 8ÀÌ´Ù. »õ·Î¿î ¼ýÀÚ´Â 68ÀÌ´Ù.
-6+8 = 14ÀÌ´Ù. »õ·Î¿î ¼ýÀÚ´Â 84ÀÌ´Ù.
-8+4 = 12ÀÌ´Ù. »õ·Î¿î ¼ýÀÚ´Â 42ÀÌ´Ù.
-4+2 = 6ÀÌ´Ù. »õ·Î¿î ¼ýÀÚ´Â 26ÀÌ´Ù.
+ë‹¤ìŒ ì˜ˆë¥¼ ë³´ìž.
+26ë¶€í„° ì‹œìž‘í•œë‹¤.
+2+6 = 8ì´ë‹¤. ìƒˆë¡œìš´ ìˆ«ìžëŠ” 68ì´ë‹¤.
+6+8 = 14ì´ë‹¤. ìƒˆë¡œìš´ ìˆ«ìžëŠ” 84ì´ë‹¤.
+8+4 = 12ì´ë‹¤. ìƒˆë¡œìš´ ìˆ«ìžëŠ” 42ì´ë‹¤.
+4+2 = 6ì´ë‹¤. ìƒˆë¡œìš´ ìˆ«ìžëŠ” 26ì´ë‹¤.
 
-À§ÀÇ ¿¹´Â 4¹ø¸¸¿¡ ¿ø·¡ ¼ýÀÚ·Î µ¹¾Æ¿Ã ¼ö ÀÖ´Ù.
-µû¶ó¼­ 26ÀÇ »çÀÌÅ¬ÀÇ ±æÀÌ´Â 4ÀÌ´Ù.
+ìœ„ì˜ ì˜ˆëŠ” 4ë²ˆë§Œì— ì›ëž˜ ìˆ«ìžë¡œ ëŒì•„ì˜¬ ìˆ˜ ìžˆë‹¤.
+ë”°ë¼ì„œ 26ì˜ ì‚¬ì´í´ì˜ ê¸¸ì´ëŠ” 4ì´ë‹¤.
 
-NÀÌ ÁÖ¾îÁ³À» ¶§, NÀÇ »çÀÌÅ¬ÀÇ ±æÀÌ¸¦ ±¸ÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
+Nì´ ì£¼ì–´ì¡Œì„ ë•Œ, Nì˜ ì‚¬ì´í´ì˜ ê¸¸ì´ë¥¼ êµ¬í•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•˜ì‹œì˜¤.
  */
 public class NumberNextReturn {
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		System.out.print("0~99 ±îÁöÀÇ Á¤¼ö¸¦ ÀÔ·ÂÇØ ÁÖ¼¼¿ä : ");
+		System.out.print("0~99 ê¹Œì§€ì˜ ì •ìˆ˜ë¥¼ ìž…ë ¥í•´ ì£¼ì„¸ìš” : ");
 		int number = -1;
 		try {
 			number = scanner.nextInt();
 			scanner.close();
 			cal(number,number,0);
 		} catch (Exception e) {
-			System.err.println("0~99 ±îÁöÀÇ Á¤¼ö¸¸ ÀÔ·Â °¡´É ÇÕ´Ï´Ù.");
+			System.err.println("0~99 ê¹Œì§€ì˜ ì •ìˆ˜ë§Œ ìž…ë ¥ ê°€ëŠ¥ í•©ë‹ˆë‹¤.");
 		}
 	}
 	public static void cal(int origin, int next, int count) {
@@ -39,9 +39,9 @@ public class NumberNextReturn {
 		int sum = first+second;
 		next = (second * 10) + (sum<10 ? sum : sum%10);
 		count++;
-		System.err.println(count + "È¸ °è»ê : " + first + " + " + second + " = " + sum + ", »õ·Î¿î ¼ýÀÚ : " + next);
+		System.err.println(count + "íšŒ ê³„ì‚° : " + first + " + " + second + " = " + sum + ", ìƒˆë¡œìš´ ìˆ«ìž : " + next);
 		if(origin == next)
-			System.out.println("´ä : °è»êÈ¸¼ö´Â " + count + " È¸");
+			System.out.println("ë‹µ : ê³„ì‚°íšŒìˆ˜ëŠ” " + count + " íšŒ");
 		else
 			cal(origin,next,count);
 	}

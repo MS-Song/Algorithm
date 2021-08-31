@@ -3,7 +3,7 @@ package com.song7749.sequence;
 import java.util.Arrays;
 
 /**
- * Á¤¼ö ¹è¿­ÀÌ ÁÖ¾îÁö¸é °¡Àå ±ä Ä¿Áö´Â ¿ø¼ÒµéÀÇ ÁıÇÕÀÇ ±æÀÌ¸¦ ±¸ÇÏ½Ã¿À.
+ * ì •ìˆ˜ ë°°ì—´ì´ ì£¼ì–´ì§€ë©´ ê°€ì¥ ê¸´ ì»¤ì§€ëŠ” ì›ì†Œë“¤ì˜ ì§‘í•©ì˜ ê¸¸ì´ë¥¼ êµ¬í•˜ì‹œì˜¤.
  *
  * EX)
  * input : [10,9,0,7,2,5]
@@ -13,7 +13,7 @@ import java.util.Arrays;
  * output : 6 // 0,2,6,9,11,15
  *
  * @author song7749@gmail.com
- * TODO ¾ÆÁ÷ ¸¶¿Ï¼º
+ * TODO ì•„ì§ ë§ˆì™„ì„±
  *
  */
 
@@ -26,7 +26,7 @@ public class LongestIncreasingSubsequence {
 
 		cal(seq,0,seq.length-1,ret);
 
-		System.out.println("°á°ú°ª" +  Arrays.toString(ret));
+		System.out.println("ê²°ê³¼ê°’" +  Arrays.toString(ret));
 	}
 
 	private static void cal(int[] seq, int start, int end, int[] ret) {
