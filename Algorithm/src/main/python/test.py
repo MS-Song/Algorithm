@@ -1,27 +1,32 @@
-# print ("     *     ")
-# print ("    ***    ")
-# print ("   *****   ")
-# print ("  *******  ")
-# print (" ********* ")
-# print ("***********")
-# print ("    ***    ")
-# print ("    ***    ")
-# print ("    ***    ")
+print ("     *     ")
+print ("    ***    ")
+print ("   *****   ")
+print ("  *******  ")
+print (" ********* ")
+print ("***********")
+print ("    ***    ")
+print ("    ***    ")
+print ("    ***    ")
 
-for i in range(1,10):
+print ("------------")
+
+blank_draw = " "
+star_draw = "*"
+max = 15
+
+for i in range(1,max-1):
     star = i + (i-1)
-    if(star > 11):
-        star = 3
+    if(star > max):
+        star = round(max/3)
 
-    blank_draw = " "
-    star_draw = "*"
-    max = 11
+    max_blank = max - star
     draw = ""
-    for j in range(0,max):
-        if star - j > 0:
-            draw += star_draw
-        else: 
-            draw += blank_draw
+    for j in range(0,round(max_blank/2)):
+        draw +=blank_draw
+    for j in range(0,star):
+        draw +=star_draw
+    for j in range(0,round(max_blank/2)):
+        draw +=blank_draw
     print(draw)
                 
         
